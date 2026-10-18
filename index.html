@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>A Letter for You</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap">
+
+  <style>
+    :root {
+      --bg: #faf8f5;
+      --paper: #ffffff;
+      --ink: #1a1714;
+      --ink-soft: #5a5450;
+      --accent: #8b6f5e;
+      --border: #e8e2db;
+      --shadow: rgba(60, 40, 20, 0.07);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161412;
+        --paper: #1e1b18;
+        --ink: #f0ebe4;
+        --ink-soft: #a09890;
+        --accent: #c4a48e;
+        --border: #2e2a26;
+        --shadow: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .envelope-wrap {
+      width: 100%;
+      max-width: 580px;
+    }
+
+    .ornament {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--accent);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 300;
+      font-style: italic;
+      opacity: 0.7;
+    }
+
+    .letter {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 32px 20px 28px;
+      box-shadow:
+        0 2px 4px var(--shadow),
+        0 8px 24px var(--shadow);
+      position: relative;
+    }
+
+    .letter::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 16px; right: 16px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0.4;
+    }
+
+    .letter-body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 1.95;
+      color: var(--ink);
+    }
+
+    .letter-body p {
+      margin: 0 0 1.4em;
+    }
+
+    .letter-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .shy-note {
+      margin-top: 2em !important;
+      font-style: italic;
+      color: var(--ink-soft);
+      font-size: 0.92em;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+      opacity: 0.4;
+      margin: 2em 0 1.8em;
+    }
+
+    .letter-footer {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    .letter-from {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--ink-soft);
+    }
+
+    .letter-date {
+      font-size: 11px;
+      font-weight: 300;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="envelope-wrap">
+    <div class="ornament">✦</div>
+
+    <div class="letter">
+      <div class="letter-body">
+        <p>I genuinely care for you. More than a normal friend does, I think. I don't know what this feeling is exactly and I am not putting any name on it.</p>
+
+        <p>Please never think this care is to impress you or get your affection. No conditions. You never judged me — you asked what is going on in my life without any judgment. Do you know how rare that is? Very few people do that.</p>
+
+        <p>And honestly — I never have communication problems with anyone. But in front of you I don't know why I struggle. Maybe that itself says something.</p>
+
+        <p>I just felt something and wanted to be honest. If this makes you uncomfortable, I am sorry — just forget I said anything. And whatever you feel, I will treat this as my an incomplete wish. I don't want to lose your friendship. In your every tough time, you will see me first in the row, beside you.</p>
+
+        <div class="divider"></div>
+
+        <p class="shy-note">I am a little shy about this.</p>
+      </div>
+
+      <div class="letter-footer">
+        <span class="letter-from"></span>
+        <span class="letter-date">October 2026</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
